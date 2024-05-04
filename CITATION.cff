@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Schulze"
+  given-names: "Max"
+  orcid: "https://orcid.org/0000-0002-3951-731X"
+- family-names: "Zisgen"
+  given-names: "Yorck"
+  orcid: "https://orcid.org/0000-0002-9646-2829"
+- family-names: "Kirschte"
+  given-names: "Moritz"
+  orcid: "https://orcid.org/0009-0000-8138-7208"
+- family-names: "Mohammadi"
+  given-names: "Esfandiar"
+  orcid: "https://orcid.org/0000-0002-2799-8128"
+- family-names: "Agnes"
+  given-names: "Koschmider"
+  orcid: "https://orcid.org/0000-0001-8206-7636"
+title: "Differentially Private Inductive Miner"
+date-released: 2024-05-02
+url: "https://github.com/Schulze-M/Moe-Miner.git"
+preferred-citation:
+  type: article
+  authors: 
+    - family-names: "Schulze"
+      given-names: "Max"
+      orcid: "https://orcid.org/0000-0002-3951-731X"
+    - family-names: "Zisgen"
+      given-names: "Yorck"
+      orcid: "https://orcid.org/0000-0002-9646-2829"
+    - family-names: "Kirschte"
+      given-names: "Moritz"
+      orcid: "https://orcid.org/0009-0000-8138-7208"
+    - family-names: "Mohammadi"
+      given-names: "Esfandiar"
+      orcid: "https://orcid.org/0000-0002-2799-8128"
+    - family-names: "Koschmider"
+      given-names: "Agnes"
+      orcid: "https://orcid.org/0000-0001-8206-7636"
+  title: "Differentially Private Inductive Miner"
+  year: 2024
