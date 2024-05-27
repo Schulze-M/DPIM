@@ -34,7 +34,7 @@ class DPIM():
         parser.add_argument('eventlog', type=str, help='Path to the input event log file.')
         parser.add_argument('-e', '--epsilon', type=float, default=1.0, help='Epsilon parameter for differential privacy. Default is 1.0.')
         parser.add_argument('-l', '--lower', type=int, default=0, help='Lower bound for the uniformly random choice for the number of DFRs.')
-        parser.add_argument('-u', '--upper', type=int, default=0, help='Lower bound for the uniformly random choice for the number of DFRs.')
+        parser.add_argument('-u', '--upper', type=int, default=0, help='Upper bound for the uniformly random choice for the number of DFRs.')
         parser.add_argument('-t,', '--threshold', type=float, default=0.95, help='Set the threshold for the rejection sampler. Default is 0.95.')
         parser.add_argument('--no-dp', action='store_true', default=False, help='Use epsilon to infinity.')
 
