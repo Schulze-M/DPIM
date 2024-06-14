@@ -5,11 +5,13 @@ from itertools import product
 
 import numpy as np
 import pm4py
-from pm4py.algo.discovery.inductive.util import generic, tree_consistency
+from pm4py.algo.discovery.inductive.util import tree_consistency
 from pm4py.algo.discovery.inductive.variants.im_clean import utils as pm4py_utils
 from pm4py.algo.discovery.inductive.variants.im_clean.cuts import loop, sequence
+from pm4py.algo.simulation.playout.process_tree import algorithm as tree_playout
 from pm4py.objects.dfg.utils import dfg_utils
 from pm4py.objects.process_tree import obj as pt
+from pm4py.objects.process_tree.utils import generic
 from pm4py.visualization.process_tree import visualizer as pt_visualizer
 
 from utils import cut_detection, eventLog_parsing, start_end_iterators, utils
@@ -326,7 +328,7 @@ class PostProcessing:
                 alphabet = {act for edge in selected_edges for act in edge}
 
             # Calculate pre and post relations
-            pre, post = dfg_utils.get_transitive_relations(alphabet, selected_edges)
+            pre, post = dfg_utils.get_transitive_relations(dfg=selected_edges, alphabet=alphabet)
 
             # create a copy of the start and end activities
             tmp_start: set = self.start.copy()
@@ -334,7 +336,7 @@ class PostProcessing:
 
         else:
             # Calculate pre and post relations
-            pre, post = dfg_utils.get_transitive_relations(alphabet, selected_edges)
+            pre, post = dfg_utils.get_transitive_relations(dfg=selected_edges, alphabet=alphabet)
 
             # create a copy of the start activities
             tmp_start: set = self.start.copy()
