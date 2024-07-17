@@ -7,7 +7,7 @@ The DPIM offers two modes of execution:
 1. **Differential private** In this mode, the DPIM is executed with differential privacy. The user can specify the epsilon ($\epsilon$) value, as well as needed lower and upper bounds. The DPIM will then execute with the specified epsilon value and bounds. To avoid errors the lowest lower bound is the total number of activities $(\\#unique\ activities)$ and the highest upper bound is the $(\\#unique\ activities)^2 -1$. 
 2. **Non-differential private** In this mode, the DPIM is executed using $\epsilon \rightarrow \infty$. The lower and upper bounds are not needed as only those permutations are considered that occur in at least one trace.
 
-Out of these two modi, the differential private mode is the default mode. To execute the DPIM in non-differential private mode, specify the `--non_dp` flag.
+Out of these two modi, the differential private mode is the default mode. To execute the DPIM in non-differential private mode, specify the `--no-dp` flag.
 
 To test the **DPIM** on a specific event log, you can run the following command:
 ```
@@ -21,7 +21,7 @@ where:
 
 Or, for non-differential private mode, the user can run the following command:
 ```
-python3 main.py <event_log> --non_dp
+python3 main.py <event_log> --no-dp
 ```
 All synthetic event logs and the URLs to the BPI Challenges are in the [event_logs](/evaluation_data/) directory.
 
@@ -34,7 +34,7 @@ The following arguments are available for the **DPIM**:
 - `-l, --lower` The lower bound for the number of permutations. The default value is the $\\#unique\ activities$ in the event log.
 - `-u, --upper` The upper bound for the number of permutations. The default value is the $(\\#unique\ activities)^2 -1$.
 - `-t --threshold` The threshold used by the Rejection sampler to accept the generated PST. The default is 0.95
-- `--non_dp` The flag to run the DPIM in non-differential private mode, $\epsilon \rightarrow \infty$.
+- `--no-dp` The flag to run the DPIM in non-differential private mode, $\epsilon \rightarrow \infty$.
 
 # Example
 To test the **DPIM** on the `TF_5` event log with $\epsilon = 1.0$, the user can run the following command:
