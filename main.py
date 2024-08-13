@@ -101,7 +101,7 @@ class DPIM():
         tree = self.create_tree(permutations=permutations, traceList=traceList, epsilon=self.epsilon, event_log=event_log)
         
         if tree is not False:
-            gviz = pt_visualizer.apply(tree, parameters={pt_visualizer.Variants.WO_DECORATION.value.Parameters.FORMAT: "pdf"})
+            gviz = pt_visualizer.apply(tree, parameters={pt_visualizer.Variants.WO_DECORATION.value.Parameters.FORMAT: "svg"})
             pt_visualizer.view(gviz)
         
         return
