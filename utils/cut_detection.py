@@ -177,3 +177,16 @@ def tau_loop(alphabet: set, dfg: dict[tuple, float], start: set) -> (list[set] o
 
     # return the groups and the new graph
     return groups, dfg if len(groups) > 0 else (None, dfg)
+
+
+def _flower(alphabet, root):
+    from pm4py.objects.process_tree import obj as pt
+
+    operator = pt.ProcessTree(operator=pt.Operator.LOOP, parent=root)
+    operator.children.append(pt.ProcessTree(parent=operator))
+    xor = pt.ProcessTree(operator=pt.Operator.XOR)
+    operator.children.append(xor)
+    for a in alphabet:
+        tree = pt.ProcessTree(label=a, parent=xor)
+        xor.children.append(tree)
+    return operator

@@ -6,9 +6,7 @@ from itertools import product
 import numpy as np
 import pm4py
 from pm4py.algo.discovery.inductive.util import tree_consistency
-from pm4py.algo.discovery.inductive.variants.im_clean import utils as pm4py_utils
 from pm4py.algo.discovery.inductive.variants.im_clean.cuts import loop, sequence
-from pm4py.algo.simulation.playout.process_tree import algorithm as tree_playout
 from pm4py.objects.dfg.utils import dfg_utils
 from pm4py.objects.process_tree import obj as pt
 from pm4py.objects.process_tree.utils import generic
@@ -44,7 +42,8 @@ class DPIM():
         parser._positionals.title = "Required Arguments"
         parser._optionals.title = "Optional Arguments"
         parser._positionals.description = "It is required to give an event log, to be able to generate a PST."
-        parser._optionals.description = "All values have defaults. However, it is recommended to give a value for epsilon, as the default is 1.0. \nThe lower and upper bounds are used to determine the number of DFRs, so the default may be too excessive. \n"
+        parser._optionals.description = "All values have defaults. However, it is recommended to give a value for epsilon, as the default is 1.0. \n" \
+                                            "The lower and upper bounds are used to determine the number of DFRs, so the default may be too excessive. \n"
 
         # parse the arguments
         args = parser.parse_args()
@@ -102,7 +101,7 @@ class DPIM():
         tree = self.create_tree(permutations=permutations, traceList=traceList, epsilon=self.epsilon, event_log=event_log)
         
         if tree is not False:
-            gviz = pt_visualizer.apply(tree, parameters={pt_visualizer.Variants.WO_DECORATION.value.Parameters.FORMAT: "svg"})
+            gviz = pt_visualizer.apply(tree, parameters={pt_visualizer.Variants.WO_DECORATION.value.Parameters.FORMAT: "pdf"})
             pt_visualizer.view(gviz)
         
         return
@@ -161,7 +160,7 @@ class DPIM():
                 edges: list = list(tmp_scoreDict.keys())
 
                 # get the noisy scores
-                noisy_scores: list = list(tmp_scoreDict.values())
+                noisy_scores: list = list(np.float64(utils.add_laplace_noise(score,1,(epsilon*0.65)/(2*n_cuts))) for score in list(tmp_scoreDict.values()))
 
                 try:
                     # get the index of the  n_cuts highest scores
@@ -391,7 +390,7 @@ class PostProcessing:
             return self.build_tree(pt.ProcessTree(pt.Operator.LOOP, root), tau_loop_set, selected_edges, pre, post, alphabet)
     
         # flower set
-        return pm4py_utils.flower(alphabet, root)
+        return cut_detection._flower(alphabet, root)
 
 
     # recursive building of the Process Tree
