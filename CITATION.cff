@@ -29,7 +29,10 @@ preferred-citation:
     - family-names: "Koschmider"
       given-names: "Agnes"
   title: "Differentially Private Inductive Miner"
-  booktitle: "2024 6th International Conference on Process Mining (ICPM)"
+  collection-title: "2024 6th International Conference on Process Mining (ICPM)"
+  publisher: 
+    - name: IEEE
   doi: 10.1109/ICPM63005.2024.10680684
   year: 2024
-  pages: 89-96
+  start: 89
+  end: 96
