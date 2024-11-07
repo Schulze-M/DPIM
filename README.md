@@ -47,3 +47,15 @@ The following tables show the lower and upper bounds used for the BPI Challenge 
 |BPI Challanges|Synthetic Logs|
 |:---:|:---:|
 | <table> <tr><th>Event Log</th> <th>Lower Bound</th> <th>  Upper Bound </th> </tr><tr> <td> BPI_Challenge_2011 </td> <td> 4280 </td> <td> 4310 </td> <tr> <td> BPI_Challenge_2012 </td> <td> 120 </td> <td> 150 </td> <tr> <td> BPI_Challenge_2013_closed_problems </td> <td> 5 </td> <td> 20 </td> <tr> <td> BPI_Challenge_2013_incidents </td> <td> 5 </td> <td> 20 </td> <tr> <td> BPI_Challenge_2013_open_problems </td> <td> 5 </td> <td> 15 </td> <tr> <td> BPI_Challenge_2015_1 </td> <td> 4805 </td> <td> 4835 </td> <tr> <td> BPI_Challenge_2015_2 </td> <td> 4885 </td> <td> 4915 </td> <tr> <td> BPI_Challenge_2015_3 </td> <td> 5020 </td> <td> 5050 </td> <tr> <td> BPI_Challenge_2015_4 </td> <td> 3650 </td> <td> 3680 </td> <tr> <td> BPI_Challenge_2015_5 </td> <td> 4960 </td> <td> 4990 </td> <tr> <td> BPI_Challenge_2017 </td> <td> 175 </td> <td> 205 </td> <tr> <td> BPI_Challenge_2018 </td> <td> 605 </td> <td> 635 </td> <tr> <td> BPI_Challenge_2019 </td> <td> 525 </td> <td> 555 </td> <tr> <td> DomesticDeclarations_2020 </td> <td> 30 </td> <td> 60 </td> <tr> <td> InternationalDeclarations_2020 </td> <td> 195 </td> <td> 225 </td> <tr> <td> PermitLog_2020 </td> <td> 555 </td> <td> 585 </td> <tr> <td> PrepaidTravelCost_2020 </td> <td> 160 </td> <td> 190 </td> <tr> <td> RequestForPayment_2020 </td> <td> 40 </td> <td> 70 </td> <tr> <td> Sepsis Cases-Event Log </td> <td> 120 </td> <td> 150 </td> </tr></table> |<table> <tr>  <th>Event Log</th> <th>Lower Bound</th> <th>  Upper Bound </th> </tr><tr> <td> TF_04  </td> <td> 6 </td> <td> 20  </td> <tr> <td> TF_05  </td> <td> 6 </td> <td> 35  </td> <tr> <td> TF_06  </td> <td> 6 </td> <td> 35  </td> <tr> <td> TF_07  </td> <td> 3 </td> <td> 8  </td> <tr> <td> TF_08  </td> <td> 3 </td> <td> 8  </td> <tr> <td> TF_09  </td> <td> 6 </td> <td> 35  </td> <tr> <td> TF_10  </td> <td> 6 </td> <td> 35  </td> <tr> <td> TF_11  </td> <td> 5 </td> <td> 24  </td> <tr> <td> TF_12  </td> <td> 5 </td> <td> 24  </td> <tr> <td> TF_13 </td> <td> 5 </td> <td> 24  </td> <tr> <td> TF_14 </td> <td> 30 </td> <td>60  </td> <tr> <td> TF_15 </td> <td> 3 </td> <td> 8  </td> <tr> <td> TF_16 </td> <td> 6 </td> <td> 35  </td> </tr> </table> |
+
+# Cite
+```
+@inproceedings{Schulze_2024,
+   author={Schulze, Max and Zisgen, Yorck and Kirschte, Moritz and Mohammadi, Esfandiar and Koschmider, Agnes},
+   title={Differentially Private Inductive Miner},
+   booktitle={2024 6th International Conference on Process Mining (ICPM)},
+   DOI={10.1109/icpm63005.2024.10680684},
+   publisher={IEEE},
+   year={2024},
+   pages={89–96} }
+```
