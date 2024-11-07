@@ -3,39 +3,33 @@ message: "If you use this software, please cite it as below."
 authors:
 - family-names: "Schulze"
   given-names: "Max"
-  orcid: "https://orcid.org/0000-0002-3951-731X"
 - family-names: "Zisgen"
   given-names: "Yorck"
-  orcid: "https://orcid.org/0000-0002-9646-2829"
 - family-names: "Kirschte"
   given-names: "Moritz"
-  orcid: "https://orcid.org/0009-0000-8138-7208"
 - family-names: "Mohammadi"
   given-names: "Esfandiar"
-  orcid: "https://orcid.org/0000-0002-2799-8128"
 - family-names: "Agnes"
   given-names: "Koschmider"
-  orcid: "https://orcid.org/0000-0001-8206-7636"
 title: "Differentially Private Inductive Miner"
-date-released: 2024-05-02
+doi: 10.1109/ICPM63005.2024.10680684
+date-released: 2024-10-04
 url: "https://github.com/Schulze-M/Moe-Miner.git"
 preferred-citation:
-  type: article
+  type: conference-paper
   authors: 
     - family-names: "Schulze"
       given-names: "Max"
-      orcid: "https://orcid.org/0000-0002-3951-731X"
     - family-names: "Zisgen"
       given-names: "Yorck"
-      orcid: "https://orcid.org/0000-0002-9646-2829"
     - family-names: "Kirschte"
       given-names: "Moritz"
-      orcid: "https://orcid.org/0009-0000-8138-7208"
     - family-names: "Mohammadi"
       given-names: "Esfandiar"
-      orcid: "https://orcid.org/0000-0002-2799-8128"
     - family-names: "Koschmider"
       given-names: "Agnes"
-      orcid: "https://orcid.org/0000-0001-8206-7636"
   title: "Differentially Private Inductive Miner"
+  booktitle: "2024 6th International Conference on Process Mining (ICPM)"
+  doi: 10.1109/ICPM63005.2024.10680684
   year: 2024
+  pages: 89-96
